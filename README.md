@@ -1,24 +1,62 @@
-# Silk & Euro - Asian & European Cross-Cultural Dating Platform
+# Apex Profit Hub - Managed by Internet Task Earn
 
-A modern, secure cross-cultural dating web application bridging connections between Asian and European singles.
+A modern, secure, orange-themed online task and survey earning platform managed by Internet Task Earn.
 
-## Key Features
+## Overview
 
-1. **Sign Up & Profile Creation Panel**:
-   - Easy registration modal with region selection (Asian / European), age verification, bio, and avatar selection.
-   - User profile customization and session management.
+Apex Profit Hub provides members with opportunities to earn income by answering questions across six distinct task sections. Correct answers earn **KSh 100** each, credited instantly to the user's dashboard balance.
 
-2. **Asian & European Match Discovery**:
-   - Filterable profile catalog featuring singles from various Asian and European countries.
-   - Profile detail views with photo galleries, interests, languages, and match compatibility.
+## Earning Sections & Unlock Rules
 
-3. **Privacy Protection System ("No Personal Information Allowed")**:
-   - Real-time chat content moderator that automatically detects and blocks personal contact information.
-   - Detects phone numbers, email addresses, social media handles (Instagram, WhatsApp, Telegram, WeChat, Snapchat, etc.), and URLs.
-   - Shows safety warnings and redactions to protect user privacy and platform compliance.
+1. **Surveys**:
+   - Unlock fee: **KSh 100**
+   - Total questions: **30**
+   - Free questions: Questions 1–5
+   - Locked questions: Questions 6–30 (**KSh 20** each to unlock)
 
-4. **Virtual Gifting & Real Money Redemption**:
-   - Interactive Gift Store with custom gifts (e.g., Silk Rose, Boba Tea, Eiffel Tower, Diamond Ring, Golden Crown).
-   - Instant gifting during chat or profile visits.
-   - Real-time conversion: Received gifts accumulate as redeemable Gems (100 Gems = $1 USD).
-   - Cashout Wallet dashboard allowing users to redeem accumulated Gems to real money via PayPal, Bank Transfer, Crypto (USDT), or Mobile Money.
+2. **Chat Moderation**:
+   - Unlock fee: **Free** (KSh 0)
+   - Total questions: **30**
+   - Free questions: Question 1
+   - Locked questions: Questions 2–30 (**KSh 20** each to unlock)
+
+3. **Academic Writing**:
+   - Unlock fee: **Free** (KSh 0)
+   - Total questions: **15**
+   - Free questions: Questions 1–6
+   - Locked questions: Questions 7–15 (**KSh 20** each to unlock)
+
+4. **Kufunza Wazungu Kiswahili**:
+   - Unlock fee: **Free** (KSh 0)
+   - Total questions: **18**
+   - Free questions: Questions 1–9
+   - Locked questions: Questions 10–18 (**KSh 20** each to unlock)
+
+5. **Risk Management**:
+   - Unlock fee: **KSh 50**
+   - Total questions: **12**
+   - Free questions: Questions 3–5
+   - Locked questions: Questions 1, 2, and 6–12 (**KSh 20** each to unlock)
+
+6. **House Reviews**:
+   - Unlock fee: **Free** (KSh 0)
+   - Total questions: **20**
+   - Free questions: Questions 1–7
+   - Locked questions: Questions 8–20 (**KSh 20** each to unlock)
+
+## Rewards & Withdrawal Rules
+
+- **Earnings**: Each correct answer yields **KSh 100**, instantly reflected on the user's dashboard balance.
+- **Maximum Withdrawal**: **KSh 3,500** per request.
+- **Withdrawal Fee**: **KSh 80** automatically deducted per withdrawal transaction.
+- **Payment Gateway**: Simulated M-Pesa integration for instant unlocking and withdrawals.
+
+## Admin Monitoring Features
+
+Administrative Portal (`admin@apexprofithub.com` / `admin123`) provides complete monitoring and management:
+- **Users**: Track registered users, account balances, and activity.
+- **Payments**: Log section unlock and question unlock payments.
+- **Questions**: Review and edit task questions and answer keys across all 6 sections.
+- **Earnings**: Monitor total platform earnings and payout stats.
+- **Withdrawals**: Review pending user withdrawal requests and approve/reject payouts.
+- **Website Progress**: Key metric indicators, active user trends, and revenue progress.
