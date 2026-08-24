@@ -3,950 +3,816 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apex Profit Hub — Managed by Internet Task Earn</title>
+<title>Silk & Euro — Asian & European Cross-Cultural Dating</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary-orange: #ff6b00;
-    --primary-orange-hover: #e55c00;
-    --accent-gold: #ffb703;
-    --bg-dark: #12100e;
-    --bg-card: #1c1815;
-    --bg-card-hover: #26211d;
-    --bg-input: #29241f;
-    --text-main: #fff8f5;
-    --text-muted: #b5a8a0;
-    --border-color: rgba(255, 107, 0, 0.2);
-    --border-light: rgba(255, 255, 255, 0.1);
-    --success: #10b981;
+    --primary: #e63946;
+    --primary-hover: #d62828;
+    --accent: #ffb703;
+    --bg-dark: #0f1117;
+    --bg-card: #181b24;
+    --bg-card-hover: #222633;
+    --bg-input: #262a38;
+    --text-main: #f8f9fa;
+    --text-muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.1);
+    --shield-green: #10b981;
     --danger: #ef4444;
-    --shadow: 0 10px 30px rgba(255, 107, 0, 0.15);
-    --radius: 14px;
+    --radius: 16px;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+  body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.5; min-height: 100vh; padding-bottom: 60px; }
+
+  /* Privacy Notice Top Banner */
+  .privacy-banner {
+    background: linear-gradient(90deg, #1e1b4b, #311b92);
+    color: #e0e7ff;
+    padding: 10px 20px;
+    font-size: 0.88rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
   }
 
-  h1, h2, h3, h4, .brand-font { font-family: 'Outfit', sans-serif; }
-  a { color: inherit; text-decoration: none; }
-  button { cursor: pointer; font-family: inherit; border: none; outline: none; }
-
-  /* --- TOPBAR & BRAND --- */
-  .top-strip {
-    background: linear-gradient(90deg, #ff6b00, #ff9100);
-    color: #fff; text-align: center; padding: 8px 16px;
-    font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-  }
-
-  .navbar {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(18, 16, 14, 0.95);
+  header {
+    background: rgba(24, 27, 36, 0.95);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    padding: 14px 24px;
-    display: flex; align-items: center; justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .brand {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 20px; font-weight: 800; color: #fff;
-  }
-  .brand-logo {
-    width: 38px; height: 38px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--primary-orange), var(--accent-gold));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px; box-shadow: 0 4px 12px rgba(255, 107, 0, 0.4);
-  }
-  .brand-sub { font-size: 11px; color: var(--accent-gold); font-weight: 600; display: block; line-height: 1; margin-top: 2px; }
 
-  .nav-links { display: flex; align-items: center; gap: 20px; font-weight: 600; font-size: 14px; }
-  .nav-link { color: var(--text-muted); transition: color 0.2s; }
-  .nav-link:hover, .nav-link.active { color: var(--primary-orange); }
-
-  .user-badge-group { display: flex; align-items: center; gap: 12px; }
-  .balance-pill {
-    background: var(--bg-card); border: 1px solid var(--border-color);
-    padding: 6px 14px; border-radius: 99px; font-size: 13.5px; font-weight: 800;
-    color: var(--accent-gold); display: flex; align-items: center; gap: 6px;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.5px;
   }
+  .logo span { color: var(--primary); }
+  .logo-badge {
+    background: rgba(230, 57, 70, 0.15);
+    color: var(--primary);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(230, 57, 70, 0.3);
+  }
+
+  .nav-actions { display: flex; align-items: center; gap: 14px; }
+
+  .wallet-badge {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .wallet-badge:hover { background: var(--bg-card-hover); border-color: var(--accent); }
 
   .btn {
-    padding: 10px 18px; border-radius: 10px; font-weight: 700; font-size: 13.5px;
-    transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
-  .btn-orange {
-    background: linear-gradient(135deg, var(--primary-orange), #ff8800);
-    color: #fff; box-shadow: 0 4px 15px rgba(255, 107, 0, 0.35);
-  }
-  .btn-orange:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 107, 0, 0.5); }
-  .btn-outline {
-    background: transparent; border: 1.5px solid var(--border-color); color: var(--text-main);
-  }
-  .btn-outline:hover { border-color: var(--primary-orange); color: var(--primary-orange); }
-  .btn-sm { padding: 6px 12px; font-size: 12.5px; border-radius: 8px; }
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--text-main); border: 1px solid var(--border); }
+  .btn-outline:hover { background: rgba(255,255,255,0.05); }
+  .btn-gold { background: linear-gradient(135deg, #ffb703, #fb8500); color: #000; font-weight: 700; }
+  .btn-gold:hover { opacity: 0.95; transform: translateY(-1px); }
 
-  /* --- HERO DASHBOARD --- */
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+  /* Hero Banner */
   .hero {
-    padding: 40px 24px 30px;
-    background: radial-gradient(circle at 50% 10%, rgba(255, 107, 0, 0.15) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.15), rgba(15, 17, 23, 0.9)), url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80') center/cover;
+    border-radius: var(--radius);
+    padding: 48px 36px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
   }
-  .hero-container { max-width: 1180px; margin: 0 auto; }
+  .hero-title { font-size: 2.2rem; font-weight: 800; max-width: 650px; line-height: 1.2; }
+  .hero-subtitle { color: var(--text-muted); max-width: 600px; font-size: 1rem; }
 
-  .dashboard-banner {
-    background: linear-gradient(135deg, #2b1708, #1c140e);
-    border: 1px solid var(--border-color); border-radius: 18px;
-    padding: 26px; display: grid; grid-template-columns: 1fr auto; gap: 20px;
-    align-items: center; box-shadow: var(--shadow);
+  /* Filtering Controls */
+  .controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
   }
-  @media (max-width: 768px) { .dashboard-banner { grid-template-columns: 1fr; } }
-
-  .dash-title { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 6px; }
-  .dash-sub { font-size: 14px; color: var(--text-muted); }
-
-  .stat-boxes { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
-  .stat-box {
-    background: rgba(0,0,0,0.3); border: 1px solid var(--border-light);
-    padding: 12px 18px; border-radius: 12px; min-width: 130px;
+  .filter-tabs { display: flex; gap: 10px; background: var(--bg-card); padding: 6px; border-radius: 30px; border: 1px solid var(--border); }
+  .tab-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.88rem;
+    transition: all 0.2s;
   }
-  .stat-lbl { font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
-  .stat-val { font-size: 22px; font-weight: 800; color: var(--primary-orange); margin-top: 2px; }
+  .tab-btn.active { background: var(--primary); color: #fff; }
 
-  /* --- EARNING SECTIONS GRID --- */
-  .container { max-width: 1180px; margin: 0 auto; padding: 40px 24px; }
-  .section-head { margin-bottom: 28px; display: flex; justify-content: space-between; align-items: flex-end; }
-  .section-head h2 { font-size: 26px; font-weight: 800; }
-  .section-head p { font-size: 14px; color: var(--text-muted); }
+  /* Profiles Grid */
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
 
-  .earning-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px;
+  .profile-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
   }
-  @media (max-width: 480px) { .earning-grid { grid-template-columns: 1fr; } }
+  .profile-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 12px 24px rgba(0,0,0,0.4); }
 
-  .earning-card {
-    background: var(--bg-card); border: 1px solid var(--border-color);
-    border-radius: var(--radius); padding: 22px; transition: all 0.25s ease;
-    display: flex; flex-direction: column; justify-content: space-between;
-    position: relative; overflow: hidden;
+  .profile-img-wrap { position: relative; height: 260px; width: 100%; }
+  .profile-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .region-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(15, 17, 23, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
-  .earning-card:hover {
-    transform: translateY(-5px); border-color: var(--primary-orange);
-    box-shadow: 0 12px 28px rgba(255, 107, 0, 0.2);
+  .online-status {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--shield-green);
+    border: 2px solid var(--bg-card);
   }
-  .card-badge {
-    position: absolute; top: 16px; right: 16px;
-    background: rgba(255, 107, 0, 0.15); color: var(--primary-orange);
-    padding: 4px 10px; border-radius: 99px; font-size: 11.5px; font-weight: 800;
-    border: 1px solid var(--border-color);
-  }
-  .card-icon { font-size: 38px; margin-bottom: 12px; }
-  .card-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
-  .card-desc { font-size: 13.5px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5; }
 
-  .card-specs {
-    background: rgba(0,0,0,0.25); border: 1px solid var(--border-light);
-    border-radius: 10px; padding: 10px 12px; margin-bottom: 18px; font-size: 12.5px;
-    display: flex; flex-direction: column; gap: 4px;
-  }
-  .spec-row { display: flex; justify-content: space-between; }
-  .spec-key { color: var(--text-muted); }
-  .spec-val { font-weight: 700; color: #fff; }
+  .profile-info { padding: 18px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .profile-name { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; justify-content: space-between; }
+  .profile-loc { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 12px; }
+  .profile-bio { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-  /* --- MODALS --- */
+  .profile-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  /* Modals */
   .modal-overlay {
-    position: fixed; inset: 0; z-index: 200;
-    background: rgba(10, 8, 6, 0.88); backdrop-filter: blur(10px);
-    display: none; align-items: center; justify-content: center;
-    padding: 20px; opacity: 0; transition: opacity 0.25s ease;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
   }
-  .modal-overlay.open { display: flex; opacity: 1; }
+  .modal-overlay.active { display: flex; }
 
   .modal-box {
-    background: var(--bg-card); border: 1px solid var(--border-color);
-    border-radius: 18px; width: 100%; max-width: 620px; max-height: 90vh;
-    overflow-y: auto; box-shadow: var(--shadow); position: relative;
-    animation: slideUp 0.3s ease;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   }
-  @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-
   .modal-header {
-    padding: 20px 24px; border-bottom: 1px solid var(--border-color);
-    display: flex; align-items: center; justify-content: space-between;
-    background: rgba(255, 107, 0, 0.05);
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .modal-title { font-size: 20px; font-weight: 800; }
-  .modal-close {
-    background: transparent; color: var(--text-muted); font-size: 22px; width: 34px; height: 34px;
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  }
-  .modal-close:hover { background: rgba(255,255,255,0.1); color: #fff; }
-  .modal-body { padding: 24px; }
+  .modal-title { font-size: 1.2rem; font-weight: 700; }
+  .close-btn { background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; }
+  .modal-body { padding: 20px; max-height: 75vh; overflow-y: auto; }
 
-  /* --- FORMS & INPUTS --- */
+  /* Form Controls */
   .form-group { margin-bottom: 16px; }
-  .form-label { display: block; font-size: 12.5px; font-weight: 700; margin-bottom: 6px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .form-input, .form-select {
-    width: 100%; padding: 12px 14px; background: var(--bg-input);
-    border: 1px solid var(--border-color); border-radius: 10px; color: #fff;
-    font-size: 14.5px; font-family: inherit; transition: border-color 0.2s;
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text-muted); }
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 0.95rem;
   }
-  .form-input:focus, .form-select:focus {
-    border-color: var(--primary-orange); outline: none; background: #322b25;
-  }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-control:focus { outline: none; border-color: var(--primary); }
 
-  /* --- QUIZ MODAL STYLES --- */
-  .quiz-progress-bar {
-    width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 99px;
-    overflow: hidden; margin-bottom: 20px;
-  }
-  .quiz-progress-fill { height: 100%; background: var(--primary-orange); width: 0%; transition: width 0.3s; }
+  /* Chat System */
+  .chat-box { height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 10px; margin-bottom: 14px; border: 1px solid var(--border); }
+  .chat-msg { max-width: 80%; padding: 10px 14px; border-radius: 14px; font-size: 0.9rem; line-height: 1.4; }
+  .chat-msg.them { background: var(--bg-input); align-self: flex-start; border-bottom-left-radius: 2px; }
+  .chat-msg.me { background: var(--primary); color: #fff; align-self: flex-end; border-bottom-right-radius: 2px; }
+  .chat-msg.gift-msg { background: linear-gradient(135deg, #ffb703, #fb8500); color: #000; font-weight: 600; text-align: center; align-self: center; width: 90%; }
 
-  .question-number-badge {
-    display: inline-block; background: var(--primary-orange); color: #fff;
-    padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 800; margin-bottom: 12px;
-  }
-  .question-text { font-size: 18px; font-weight: 700; margin-bottom: 20px; line-height: 1.4; }
-
-  .options-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-  .option-btn {
-    background: var(--bg-input); border: 1.5px solid var(--border-light);
-    border-radius: 10px; padding: 14px 16px; text-align: left; font-size: 14.5px;
-    color: var(--text-main); font-weight: 600; transition: all 0.2s;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .option-btn:hover { border-color: var(--primary-orange); background: var(--bg-card-hover); }
-  .option-btn.selected { border-color: var(--primary-orange); background: rgba(255, 107, 0, 0.15); }
-  .option-btn.correct { border-color: var(--success); background: rgba(16, 185, 129, 0.15); color: var(--success); }
-  .option-btn.wrong { border-color: var(--danger); background: rgba(239, 68, 68, 0.15); color: var(--danger); }
-
-  .locked-question-notice {
-    background: linear-gradient(135deg, rgba(255, 107, 0, 0.15), rgba(255, 183, 3, 0.15));
-    border: 1.5px dashed var(--primary-orange); border-radius: 12px;
-    padding: 20px; text-align: center; margin-bottom: 20px;
+  .privacy-warning {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid var(--danger);
+    color: #fca5a5;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    margin-bottom: 12px;
+    display: none;
   }
 
-  /* --- ADMIN PANEL TABLE --- */
-  .admin-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px; }
-  .admin-table th, .admin-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-light); text-align: left; }
-  .admin-table th { color: var(--text-muted); text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; }
+  .chat-input-wrap { display: flex; gap: 8px; }
 
-  /* Toast Notification */
-  .toast {
-    position: fixed; bottom: 24px; right: 24px; z-index: 300;
-    background: var(--bg-card); border: 1.5px solid var(--primary-orange);
-    color: #fff; padding: 14px 20px; border-radius: 12px; box-shadow: var(--shadow);
-    display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700;
-    transform: translateY(100px); opacity: 0; transition: all 0.3s ease;
+  /* Gifts Store Grid */
+  .gifts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .gift-card {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
   }
-  .toast.show { transform: translateY(0); opacity: 1; }
+  .gift-card:hover { border-color: var(--accent); background: var(--bg-card-hover); transform: translateY(-2px); }
+  .gift-icon { font-size: 2.2rem; margin-bottom: 6px; }
+  .gift-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+  .gift-price { color: var(--accent); font-weight: 700; font-size: 0.85rem; }
+
+  /* Wallet & Cashout Dashboard */
+  .stats-card {
+    background: linear-gradient(135deg, rgba(255, 183, 3, 0.1), rgba(24, 27, 36, 0.9));
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stat-val { font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+  .stat-sub { font-size: 0.8rem; color: var(--text-muted); }
 </style>
 </head>
 <body>
 
-<!-- TOP ANNOUNCEMENT STRIP -->
-<div class="top-strip">
-  🔥 Apex Profit Hub — Official Earning Platform Managed by <strong>Internet Task Earn</strong> | Earn KSh 100 Per Task!
-</div>
-
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="brand">
-    <div class="brand-logo">🍊</div>
-    <div>
-      <span>Apex Profit Hub</span>
-      <span class="brand-sub">by Internet Task Earn</span>
-    </div>
+  <!-- Top Security & Privacy Banner -->
+  <div class="privacy-banner">
+    🛡️ <strong>PRIVACY GUARANTEE:</strong> Real-time filtering enabled. Zero personal information sharing allowed (Phone, Email, Social Handles, Addresses blocked).
   </div>
-  <nav class="nav-links">
-    <a href="#" class="nav-link active" onclick="showDashboardView(); return false;">Dashboard</a>
-    <a href="#" class="nav-link" onclick="openWithdrawModal(); return false;">Withdraw Funds</a>
-    <a href="#" class="nav-link" onclick="openAdminModal(); return false;">Admin Portal</a>
-  </nav>
-  <div class="user-badge-group">
-    <div class="balance-pill" title="Current Wallet Balance" onclick="openWithdrawModal()">
-      💰 KSh <span id="userBalanceDisplay">0</span>
-    </div>
-    <button class="btn btn-orange btn-sm" id="authBtn" onclick="openAuthModal()">Login / Register</button>
-  </div>
-</header>
 
-<!-- HERO / DASHBOARD STATS -->
-<section class="hero">
-  <div class="hero-container">
-    <div class="dashboard-banner">
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">
+      Silk<span>&</span>Euro
+      <span class="logo-badge">Asian & European Dating</span>
+    </a>
+    <div class="nav-actions">
+      <div class="wallet-badge" onclick="openWalletModal()">
+        🎁 <span id="nav-gems">150 Gems</span> ($<span id="nav-usd">1.50</span>)
+      </div>
+      <div id="auth-buttons">
+        <button class="btn btn-outline" onclick="openModal('login-modal')">Sign In</button>
+        <button class="btn btn-primary" onclick="openModal('signup-modal')">Sign Up Free</button>
+      </div>
+      <div id="user-profile-badge" style="display: none;">
+        <span id="user-display-name" style="font-weight: 700; color: #fff; font-size: 0.9rem;"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-title">Connect Asian & European Hearts Safely Across Continents</div>
+      <div class="hero-subtitle">Meet checked Asian & European singles. Engage in high-privacy conversations and share meaningful virtual gifts redeemable for real money.</div>
       <div>
-        <h1 class="dash-title">Welcome to Apex Profit Hub</h1>
-        <p class="dash-sub">Select an earning section below, complete tasks, and instantly earn KSh 100 for every correct answer!</p>
-        <div class="stat-boxes">
-          <div class="stat-box">
-            <div class="stat-lbl">Wallet Balance</div>
-            <div class="stat-val">KSh <span id="dashBalance">0</span></div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-lbl">Completed Tasks</div>
-            <div class="stat-val" id="dashCompleted">0</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-lbl">Total Earnings</div>
-            <div class="stat-val">KSh <span id="dashEarnings">0</span></div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button class="btn btn-orange" onclick="openWithdrawModal()" style="padding: 14px 24px; font-size: 15px;">
-          💸 Withdraw Cash (Max KSh 3,500)
-        </button>
+        <button class="btn btn-gold" onclick="openModal('signup-modal')">Join Cross-Cultural Singles</button>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- MAIN EARNING SECTIONS -->
-<main class="container">
-  <div class="section-head">
-    <div>
-      <h2>6 Earning Sections</h2>
-      <p>Choose your preferred task category to start answering questions and accumulating rewards.</p>
+    <!-- Filter Bar -->
+    <div class="controls-bar">
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterProfiles('all', this)">All Regions</button>
+        <button class="tab-btn" onclick="filterProfiles('asian', this)">🌏 Asian Singles</button>
+        <button class="tab-btn" onclick="filterProfiles('european', this)">🌍 European Singles</button>
+      </div>
+      <div style="font-size: 0.88rem; color: var(--text-muted);">
+        Showing <strong id="profile-count" style="color: #fff;">0</strong> Verified Singles
+      </div>
+    </div>
+
+    <!-- Profiles Grid -->
+    <div class="profiles-grid" id="profiles-container">
+      <!-- Dynamic Profile Cards -->
     </div>
   </div>
 
-  <div class="earning-grid" id="earningGrid">
-    <!-- Earning Section Cards Rendered via JS -->
-  </div>
-</main>
-
-<!-- AUTHENTICATION MODAL -->
-<div class="modal-overlay" id="authModal">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3 class="modal-title">Member Login / Registration</h3>
-      <button class="modal-close" onclick="closeModal('authModal')">&times;</button>
-    </div>
-    <div class="modal-body">
-      <form id="authForm" onsubmit="handleAuthSubmit(event)">
-        <div class="form-group">
-          <label class="form-label">Full Name</label>
-          <input type="text" class="form-input" id="authName" placeholder="e.g. John Doe" required>
-        </div>
-        <div class="form-row">
+  <!-- Sign Up Modal -->
+  <div class="modal-overlay" id="signup-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Create Free Account</div>
+        <button class="close-btn" onclick="closeModal('signup-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="signup-form" onsubmit="handleSignup(event)">
           <div class="form-group">
-            <label class="form-label">Phone Number (M-Pesa)</label>
-            <input type="tel" class="form-input" id="authPhone" placeholder="0712345678" required>
+            <label>Username / Alias</label>
+            <input type="text" class="form-control" id="signup-username" placeholder="e.g. SilkTraveler99" required>
           </div>
           <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" id="authEmail" placeholder="user@example.com" required>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-orange" style="width: 100%; justify-content: center; padding: 14px;">Sign In to Account</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- SECTION UNLOCK PAYWALL MODAL -->
-<div class="modal-overlay" id="unlockModal">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3 class="modal-title" id="unlockModalTitle">Unlock Earning Section</h3>
-      <button class="modal-close" onclick="closeModal('unlockModal')">&times;</button>
-    </div>
-    <div class="modal-body" id="unlockModalBody">
-      <!-- Paywall details -->
-    </div>
-  </div>
-</div>
-
-<!-- QUIZ / TASK INTERFACE MODAL -->
-<div class="modal-overlay" id="quizModal">
-  <div class="modal-box" style="max-width: 680px;">
-    <div class="modal-header">
-      <h3 class="modal-title" id="quizSectionTitle">Task Session</h3>
-      <button class="modal-close" onclick="closeModal('quizModal')">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div class="quiz-progress-bar">
-        <div class="quiz-progress-fill" id="quizProgressFill"></div>
-      </div>
-
-      <div id="quizContainer">
-        <!-- Question or Lock Screen rendered via JS -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- WITHDRAWAL MODAL -->
-<div class="modal-overlay" id="withdrawModal">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3 class="modal-title">💸 Withdraw Cash Earnings</h3>
-      <button class="modal-close" onclick="closeModal('withdrawModal')">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div style="background: rgba(255,107,0,0.1); border: 1px solid var(--border-color); padding: 14px; border-radius: 12px; margin-bottom: 20px; font-size: 13.5px;">
-        📌 <strong>Withdrawal Rules:</strong><br>
-        • Maximum withdrawal limit: <strong>KSh 3,500</strong> per request.<br>
-        • Processing fee: <strong>KSh 80</strong> deducted per payout.<br>
-        • Available Balance: <strong style="color: var(--accent-gold);">KSh <span id="wAvailBal">0</span></strong>
-      </div>
-
-      <form id="withdrawForm" onsubmit="handleWithdrawSubmit(event)">
-        <div class="form-group">
-          <label class="form-label">Withdrawal Amount (KSh)</label>
-          <input type="number" min="100" max="3500" class="form-input" id="wAmount" placeholder="e.g. 2000" oninput="calculateWithdrawFee()" required>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Withdrawal Fee</label>
-            <input type="text" class="form-input" id="wFee" value="KSh 80" readonly style="color: var(--danger); font-weight: 700;">
+            <label>Email Address (Kept 100% Private)</label>
+            <input type="email" class="form-control" id="signup-email" placeholder="user@domain.com" required>
           </div>
           <div class="form-group">
-            <label class="form-label">Net You Receive</label>
-            <input type="text" class="form-input" id="wNet" value="KSh 0" readonly style="color: var(--success); font-weight: 700;">
+            <label>Region / Origin</label>
+            <select class="form-control" id="signup-region" required>
+              <option value="asian">🌏 Asian Region</option>
+              <option value="european">🌍 European Region</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Location / City</label>
+            <input type="text" class="form-control" id="signup-location" placeholder="e.g. Tokyo, Japan or Paris, France" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="••••••••" required>
+          </div>
+          <div style="margin-bottom: 16px; font-size: 0.8rem; color: var(--text-muted);">
+            🔒 By joining, you agree to comply with our strict Anti-Harassment & No Personal Info Exchange rules.
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Complete Registration</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="login-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Member Sign In</div>
+        <button class="close-btn" onclick="closeModal('login-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" placeholder="user@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interaction / Chat Modal -->
+  <div class="modal-overlay" id="chat-modal">
+    <div class="modal-box" style="max-width: 580px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img id="chat-target-img" src="" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover;">
+          <div>
+            <div class="modal-title" id="chat-target-name">Chat</div>
+            <div style="font-size: 0.75rem; color: var(--shield-green); font-weight: 600;">🔒 End-to-End Privacy Shield Enabled</div>
           </div>
         </div>
-        <div class="form-group">
-          <label class="form-label">Payment Method</label>
-          <select class="form-select" id="wMethod" required>
-            <option value="M-Pesa Express">M-Pesa Instant Express</option>
-            <option value="Airtel Money">Airtel Money</option>
-            <option value="Bank Transfer">Bank Wire</option>
-          </select>
+        <button class="close-btn" onclick="closeModal('chat-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="privacy-warning" id="chat-warning">
+          ⚠️ <strong>PRIVACY VIOLATION DETECTED:</strong> Sharing phone numbers, emails, addresses, or external handles (@whatsapp, instagram, telegram) is prohibited to prevent scamming. Message blocked.
         </div>
-        <div class="form-group">
-          <label class="form-label">Phone Number / Account Number</label>
-          <input type="text" class="form-input" id="wAccount" placeholder="07xxxxxxxx" required>
-        </div>
-        <button type="submit" class="btn btn-orange" style="width: 100%; justify-content: center; padding: 14px;">Confirm &amp; Withdraw Funds</button>
-      </form>
-    </div>
-  </div>
-</div>
 
-<!-- ADMIN CONTROL PORTAL MODAL -->
-<div class="modal-overlay" id="adminModal">
-  <div class="modal-box" style="max-width: 820px;">
-    <div class="modal-header">
-      <h3 class="modal-title">⚙️ Admin Monitoring Portal</h3>
-      <button class="modal-close" onclick="closeModal('adminModal')">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 24px; text-align: center;">
-        <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-color);">
-          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Total Registered Users</div>
-          <div style="font-size: 24px; font-weight: 800; color: #fff;" id="admUserCount">1,482</div>
+        <div class="chat-box" id="chat-messages">
+          <!-- Dynamic chat messages -->
         </div>
-        <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-color);">
-          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Total User Earnings</div>
-          <div style="font-size: 24px; font-weight: 800; color: var(--accent-gold);" id="admTotalEarned">KSh 482,900</div>
-        </div>
-        <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-color);">
-          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Withdrawal Requests</div>
-          <div style="font-size: 24px; font-weight: 800; color: var(--success);" id="admWithdrawCount">312</div>
+
+        <div class="chat-input-wrap">
+          <input type="text" class="form-control" id="chat-input" placeholder="Type a safe message..." onkeypress="if(event.key === 'Enter') sendChatMessage()">
+          <button class="btn btn-primary" onclick="sendChatMessage()">Send</button>
+          <button class="btn btn-gold" onclick="openGiftModal()" title="Send Virtual Gift">🎁 Gift</button>
         </div>
       </div>
-
-      <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 10px;">Recent Payments &amp; Question Unlocks</h4>
-      <table class="admin-table">
-        <thead>
-          <tr>
-            <th>User</th>
-            <th>Section</th>
-            <th>Type</th>
-            <th>Amount Paid</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="adminPaymentsTable">
-          <tr>
-            <td>0712***890</td>
-            <td>Surveys</td>
-            <td>Section Unlock</td>
-            <td>KSh 100</td>
-            <td><span style="color: var(--success); font-weight: 700;">Completed</span></td>
-          </tr>
-          <tr>
-            <td>0799***637</td>
-            <td>Risk Management</td>
-            <td>Section Unlock</td>
-            <td>KSh 50</td>
-            <td><span style="color: var(--success); font-weight: 700;">Completed</span></td>
-          </tr>
-          <tr>
-            <td>0745***123</td>
-            <td>Academic Writing</td>
-            <td>Question #7 Unlock</td>
-            <td>KSh 20</td>
-            <td><span style="color: var(--success); font-weight: 700;">Completed</span></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h4 style="font-size: 15px; font-weight: 700; margin-top: 24px; margin-bottom: 10px;">Recent Cash Withdrawals</h4>
-      <table class="admin-table">
-        <thead>
-          <tr>
-            <th>User</th>
-            <th>Amount</th>
-            <th>Fee</th>
-            <th>Net Received</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="adminWithdrawTable">
-          <tr>
-            <td>0722***456</td>
-            <td>KSh 3,000</td>
-            <td>KSh 80</td>
-            <td>KSh 2,920</td>
-            <td><span style="color: var(--success); font-weight: 700;">Processed</span></td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
-</div>
 
-<!-- TOAST -->
-<div class="toast" id="toastNotification">
-  <span id="toastIcon">✨</span>
-  <span id="toastMsg">Action completed</span>
-</div>
+  <!-- Gift Modal Store -->
+  <div class="modal-overlay" id="gift-modal">
+    <div class="modal-box" style="max-width: 520px;">
+      <div class="modal-header">
+        <div class="modal-title">🎁 Send Virtual Gift</div>
+        <button class="close-btn" onclick="closeModal('gift-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+          Gifts are converted into redeemable Gems for your match, which they can convert directly into real currency!
+        </p>
+        <div class="gifts-grid" id="gifts-container">
+          <!-- Dynamic Gifts -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wallet & Gift Cashout Modal -->
+  <div class="modal-overlay" id="wallet-modal">
+    <div class="modal-box" style="max-width: 500px;">
+      <div class="modal-header">
+        <div class="modal-title">💎 Redeem Gifts & Cash Out</div>
+        <button class="close-btn" onclick="closeModal('wallet-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="stats-card">
+          <div>
+            <div class="stat-sub">Redeemable Gems Balance</div>
+            <div class="stat-val" id="wallet-gems-val">150 Gems</div>
+          </div>
+          <div>
+            <div class="stat-sub">Real Money Cash Value</div>
+            <div class="stat-val" style="color: var(--shield-green);" id="wallet-usd-val">$1.50 USD</div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-input); padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 0.85rem; color: var(--text-muted);">
+          ℹ️ Conversion Rate: <strong>100 Gems = $1.00 USD</strong>. Minimum payout target is $1.00 USD.
+        </div>
+
+        <form onsubmit="handleCashout(event)">
+          <div class="form-group">
+            <label>Payout Method</label>
+            <select class="form-control" id="payout-method" required>
+              <option value="paypal">PayPal Instant Transfer</option>
+              <option value="bank">Direct Bank Wire (SEPA / Swift)</option>
+              <option value="crypto">USDT / Crypto Wallet</option>
+              <option value="mobile">Mobile Money / M-Pesa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Account / Wallet Target Details</label>
+            <input type="text" class="form-control" id="payout-details" placeholder="e.g. paypal@domain.com or Crypto Wallet Address" required>
+          </div>
+          <div class="form-group">
+            <label>Amount of Gems to Redeem</label>
+            <input type="number" class="form-control" id="payout-amount" min="100" value="100" required>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width: 100%;">Withdraw Funds to Money</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 <script>
-  // --- APPLICATION STATE ---
-  let user = {
-    name: "User",
-    phone: "0700000000",
-    balance: 0,
-    completedTasks: 0,
-    totalEarnings: 0,
-    unlockedSections: {
-      'chat': true,
-      'writing': true,
-      'kiswahili': true,
-      'house': true,
-      'surveys': false,
-      'risk': false
-    },
-    unlockedQuestions: {} // key: `${sectionId}_${qIndex}` -> true
-  };
-
-  // --- SECTIONS CONFIGURATION & QUESTIONS ---
-  const sections = [
+  // Initial Mock Profiles (Asian & European)
+  const PROFILES = [
     {
-      id: 'surveys',
-      title: 'Surveys',
-      icon: '📊',
-      desc: 'Market research & public opinion survey questions.',
-      startFee: 100,
-      totalQuestions: 30,
-      freeQuestions: [0, 1, 2, 3, 4], // Questions 1-5 free
-      questionCost: 20
+      id: 1,
+      name: "Mei-Ling",
+      age: 26,
+      region: "asian",
+      location: "Kyoto, Japan",
+      bio: "Traditional tea lover & web designer. Excited to connect with authentic European friends & partners.",
+      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80"
     },
     {
-      id: 'chat',
-      title: 'Chat Moderation',
-      icon: '💬',
-      desc: 'Moderate conversations and safety compliance tasks.',
-      startFee: 0,
-      totalQuestions: 30,
-      freeQuestions: [0], // First question free, remaining cost KSh 20
-      questionCost: 20
+      id: 2,
+      name: "Sophia",
+      age: 28,
+      region: "european",
+      location: "Florence, Italy",
+      bio: "Architectural restorer who loves Asian cultures, cuisine & peaceful conversations.",
+      img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80"
     },
     {
-      id: 'writing',
-      title: 'Academic Writing',
-      icon: '📝',
-      desc: 'Proofread and evaluate academic essays & research abstracts.',
-      startFee: 0,
-      totalQuestions: 15,
-      freeQuestions: [0, 1, 2, 3, 4, 5], // Questions 1-6 free
-      questionCost: 20
+      id: 3,
+      name: "Kenji",
+      age: 29,
+      region: "asian",
+      location: "Seoul, South Korea",
+      bio: "Music producer interested in cross-continental friendship and cultural exchange.",
+      img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=500&q=80"
     },
     {
-      id: 'kiswahili',
-      title: 'Kufunza Wazungu Kiswahili',
-      icon: '🌍',
-      desc: 'Teach Kiswahili vocabulary, grammar & cultural expressions.',
-      startFee: 0,
-      totalQuestions: 18,
-      freeQuestions: [0, 1, 2, 3, 4, 5, 6, 7, 8], // Questions 1-9 free
-      questionCost: 20
+      id: 4,
+      name: "Elena",
+      age: 25,
+      region: "european",
+      location: "Vienna, Austria",
+      bio: "Violinist & nature enthusiast searching for meaningful deep connections.",
+      img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80"
     },
     {
-      id: 'risk',
-      title: 'Risk Management',
-      icon: '🛡️',
-      desc: 'Assess financial risks, security compliance & fraud prevention.',
-      startFee: 50,
-      totalQuestions: 12,
-      freeQuestions: [2, 3, 4], // Questions 3-5 free (index 2, 3, 4)
-      questionCost: 20
+      id: 5,
+      name: "Lin",
+      age: 27,
+      region: "asian",
+      location: "Singapore",
+      bio: "Tech entrepreneur into gourmet cooking and cross-border dating.",
+      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80"
     },
     {
-      id: 'house',
-      title: 'House Reviews',
-      icon: '🏡',
-      desc: 'Evaluate residential real estate listings & tenant reviews.',
-      startFee: 0,
-      totalQuestions: 20,
-      freeQuestions: [0, 1, 2, 3, 4, 5, 6], // Questions 1-7 free
-      questionCost: 20
+      id: 6,
+      name: "Lucas",
+      age: 30,
+      region: "european",
+      location: "Stockholm, Sweden",
+      bio: "Photographer fascinated by East Asian landscapes and sincere relations.",
+      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
     }
   ];
 
-  // SAMPLE QUESTION GENERATOR FOR EACH SECTION
-  function getQuestionData(sectionId, qIndex) {
-    const qNum = qIndex + 1;
-    if (sectionId === 'surveys') {
-      return {
-        q: `[Surveys Q${qNum}] What is the primary factor influencing customer purchase decisions online?`,
-        opts: ["A. Fast Delivery & Free Returns", "B. Store Color Scheme", "C. Font Choice", "D. Social Media Ads"],
-        ans: 0
-      };
-    } else if (sectionId === 'chat') {
-      return {
-        q: `[Chat Moderation Q${qNum}] Which of the following messages should be flagged for privacy violation?`,
-        opts: ["A. Hello, nice to meet you!", "B. Call me directly on 0799922637", "C. What are your weekend plans?", "D. Thanks for your help."],
-        ans: 1
-      };
-    } else if (sectionId === 'writing') {
-      return {
-        q: `[Academic Writing Q${qNum}] Identify the correct APA citation style component:`,
-        opts: ["A. (Smith, 2023, p. 14)", "B. Smith -> 2023", "C. Author Smith year 2023", "D. 2023 Smith APA"],
-        ans: 0
-      };
-    } else if (sectionId === 'kiswahili') {
-      return {
-        q: `[Kiswahili Q${qNum}] How do you say 'Welcome to East Africa' in Kiswahili?`,
-        opts: ["A. Habari gani leo", "B. Karibu Afrika Mashariki", "C. Asante sana rafiki", "D. Kwaheri kuonana"],
-        ans: 1
-      };
-    } else if (sectionId === 'risk') {
-      return {
-        q: `[Risk Management Q${qNum}] What is the best mitigation strategy for digital payment fraud?`,
-        opts: ["A. Ignore alerts", "B. Multi-Factor Authentication (MFA)", "C. Plaintext passwords", "D. Disabling logs"],
-        ans: 1
-      };
-    } else if (sectionId === 'house') {
-      return {
-        q: `[House Reviews Q${qNum}] What feature adds the highest value to modern rental apartments?`,
-        opts: ["A. Included High-Speed Wi-Fi & Water", "B. Old carpets", "C. No windows", "D. High stairs"],
-        ans: 0
-      };
-    }
-    return {
-      q: `Question ${qNum}`,
-      opts: ["Option 1", "Option 2", "Option 3", "Option 4"],
-      ans: 0
-    };
-  }
+  const GIFTS = [
+    { id: 'rose', icon: '🌹', name: 'Red Rose', costGems: 20 },
+    { id: 'boba', icon: '🧋', name: 'Matcha Tea', costGems: 50 },
+    { id: 'chocolate', icon: '🍫', name: 'Euro Truffle', costGems: 100 },
+    { id: 'ring', icon: '💍', name: 'Diamond Ring', costGems: 500 },
+    { id: 'castle', icon: '🏰', name: 'Euro Castle', costGems: 1000 },
+    { id: 'crown', icon: '👑', name: 'Royal Crown', costGems: 2500 }
+  ];
 
-  // ACTIVE QUIZ SESSION
-  let currentQuiz = {
-    sectionId: null,
-    qIndex: 0
-  };
+  let userGems = 150; // Initial redeemable gifts gems
+  let activeChatTarget = null;
+  let chatHistories = {};
+  let currentUser = null;
 
-  // --- RENDER EARNING SECTIONS ---
-  function renderEarningSections() {
-    const grid = document.getElementById('earningGrid');
-    grid.innerHTML = '';
+  // Initialize
+  document.addEventListener("DOMContentLoaded", () => {
+    renderProfiles(PROFILES);
+    renderGifts();
+    updateWalletDisplay();
+  });
 
-    sections.forEach(sec => {
-      const isUnlocked = user.unlockedSections[sec.id];
-      const card = document.createElement('div');
-      card.className = 'earning-card';
+  function renderProfiles(list) {
+    const container = document.getElementById("profiles-container");
+    document.getElementById("profile-count").innerText = list.length;
 
-      const unlockText = sec.startFee > 0 ? `Requires KSh ${sec.startFee} Start Fee` : 'Free to Start';
-      const freeCount = sec.freeQuestions.length;
-
-      card.innerHTML = `
-        <div>
-          <span class="card-badge">${unlockText}</span>
-          <div class="card-icon">${sec.icon}</div>
-          <div class="card-title">${sec.title}</div>
-          <div class="card-desc">${sec.desc}</div>
-
-          <div class="card-specs">
-            <div class="spec-row"><span class="spec-key">Total Tasks:</span><span class="spec-val">${sec.totalQuestions} Questions</span></div>
-            <div class="spec-row"><span class="spec-key">Free Questions:</span><span class="spec-val">${freeCount} Free</span></div>
-            <div class="spec-row"><span class="spec-key">Locked Questions:</span><span class="spec-val">KSh 20 per Question</span></div>
-            <div class="spec-row"><span class="spec-key">Reward Per Task:</span><span class="spec-val" style="color:var(--accent-gold);">KSh 100</span></div>
+    container.innerHTML = list.map(p => `
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="${p.img}" alt="${p.name}">
+          <div class="region-tag">
+            ${p.region === 'asian' ? '🌏 Asian' : '🌍 European'}
+          </div>
+          <div class="online-status"></div>
+        </div>
+        <div class="profile-info">
+          <div>
+            <div class="profile-name">
+              <span>${p.name}, ${p.age}</span>
+            </div>
+            <div class="profile-loc">📍 ${p.location}</div>
+            <div class="profile-bio">${p.bio}</div>
+          </div>
+          <div class="profile-actions">
+            <button class="btn btn-primary" style="font-size: 0.8rem; padding: 8px 12px;" onclick="startChat(${p.id})">💬 Chat Safe</button>
+            <button class="btn btn-gold" style="font-size: 0.8rem; padding: 8px 12px;" onclick="openGiftModalFor(${p.id})">🎁 Send Gift</button>
           </div>
         </div>
-
-        <button class="btn ${isUnlocked ? 'btn-orange' : 'btn-outline'}" style="width:100%; justify-content:center;" onclick="startSection('${sec.id}')">
-          ${isUnlocked ? '🚀 Start Tasks' : `🔓 Unlock Section (KSh ${sec.startFee})`}
-        </button>
-      `;
-      grid.appendChild(card);
-    });
-  }
-
-  // --- UNLOCK & QUIZ FLOW ---
-  function startSection(sectionId) {
-    const sec = sections.find(s => s.id === sectionId);
-    if (!sec) return;
-
-    if (!user.unlockedSections[sectionId]) {
-      // Show unlock payment modal
-      document.getElementById('unlockModalTitle').textContent = `Unlock ${sec.title}`;
-      document.getElementById('unlockModalBody').innerHTML = `
-        <div style="text-align:center; padding: 10px 0;">
-          <div style="font-size:48px; margin-bottom:10px;">🔓</div>
-          <h3>Unlock ${sec.title} Section</h3>
-          <p style="color:var(--text-muted); margin: 10px 0 20px;">
-            This section requires a one-time unlock fee of <strong>KSh ${sec.startFee}</strong>.
-            You will gain immediate access to free questions and earn KSh 100 per correct answer!
-          </p>
-          <button class="btn btn-orange" style="width:100%; justify-content:center; padding:14px;" onclick="paySectionUnlock('${sec.id}', ${sec.startFee})">
-            Pay KSh ${sec.startFee} &amp; Unlock Now
-          </button>
-        </div>
-      `;
-      openModal('unlockModal');
-      return;
-    }
-
-    // Launch Quiz Modal
-    currentQuiz.sectionId = sectionId;
-    currentQuiz.qIndex = 0;
-    renderQuizQuestion();
-    openModal('quizModal');
-  }
-
-  function paySectionUnlock(sectionId, fee) {
-    user.unlockedSections[sectionId] = true;
-    closeModal('unlockModal');
-    renderEarningSections();
-    showToast(`✅ Section unlocked successfully! (KSh ${fee} Paid)`, 'success');
-
-    // Launch quiz
-    currentQuiz.sectionId = sectionId;
-    currentQuiz.qIndex = 0;
-    renderQuizQuestion();
-    openModal('quizModal');
-  }
-
-  function renderQuizQuestion() {
-    const sec = sections.find(s => s.id === currentQuiz.sectionId);
-    if (!sec) return;
-
-    document.getElementById('quizSectionTitle').textContent = `${sec.title} (Question ${currentQuiz.qIndex + 1} of ${sec.totalQuestions})`;
-
-    // Progress fill
-    const pct = ((currentQuiz.qIndex + 1) / sec.totalQuestions) * 100;
-    document.getElementById('quizProgressFill').style.width = `${pct}%`;
-
-    const container = document.getElementById('quizContainer');
-    const isFree = sec.freeQuestions.includes(currentQuiz.qIndex);
-    const qKey = `${sec.id}_${currentQuiz.qIndex}`;
-    const isUnlocked = isFree || user.unlockedQuestions[qKey];
-
-    if (!isUnlocked) {
-      // Render Question Unlock Paywall (KSh 20)
-      container.innerHTML = `
-        <div class="locked-question-notice">
-          <div style="font-size:40px; margin-bottom:8px;">🔒</div>
-          <h4 style="font-size:18px; font-weight:800; color:#fff;">Question #${currentQuiz.qIndex + 1} is Locked</h4>
-          <p style="font-size:13.5px; color:var(--text-muted); margin: 8px 0 16px;">
-            This locked question requires KSh 20 to reveal. Correct answer yields <strong>KSh 100</strong> directly to your balance!
-          </p>
-          <button class="btn btn-orange" style="padding:12px 24px;" onclick="payQuestionUnlock('${sec.id}', ${currentQuiz.qIndex})">
-            Unlock Question #${currentQuiz.qIndex + 1} (KSh 20)
-          </button>
-        </div>
-        <div style="display:flex; justify-content:space-between;">
-          <button class="btn btn-outline btn-sm" onclick="prevQuestion()" ${currentQuiz.qIndex === 0 ? 'disabled' : ''}>← Previous</button>
-          <button class="btn btn-outline btn-sm" onclick="nextQuestion()" ${currentQuiz.qIndex === sec.totalQuestions - 1 ? 'disabled' : ''}>Skip / Next →</button>
-        </div>
-      `;
-      return;
-    }
-
-    // Render Question
-    const qData = getQuestionData(sec.id, currentQuiz.qIndex);
-
-    container.innerHTML = `
-      <span class="question-number-badge">${isFree ? 'FREE QUESTION' : 'UNLOCKED QUESTION'}</span>
-      <div class="question-text">${qData.q}</div>
-
-      <div class="options-list">
-        ${qData.opts.map((opt, idx) => `
-          <button class="option-btn" id="optBtn_${idx}" onclick="submitAnswer(${idx}, ${qData.ans})">
-            <span>${opt}</span>
-            <span>➜</span>
-          </button>
-        `).join('')}
       </div>
-
-      <div style="display:flex; justify-content:space-between; margin-top:20px;">
-        <button class="btn btn-outline btn-sm" onclick="prevQuestion()" ${currentQuiz.qIndex === 0 ? 'disabled' : ''}>← Previous</button>
-        <button class="btn btn-outline btn-sm" onclick="nextQuestion()" ${currentQuiz.qIndex === sec.totalQuestions - 1 ? 'disabled' : ''}>Next Question →</button>
-      </div>
-    `;
+    `).join('');
   }
 
-  function payQuestionUnlock(sectionId, qIndex) {
-    const qKey = `${sectionId}_${qIndex}`;
-    user.unlockedQuestions[qKey] = true;
-    showToast(`🔓 Question #${qIndex + 1} Unlocked! (KSh 20 Paid)`, 'success');
-    renderQuizQuestion();
-  }
+  function filterProfiles(region, btnElement) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btnElement.classList.add('active');
 
-  function submitAnswer(selectedIdx, correctIdx) {
-    const sec = sections.find(s => s.id === currentQuiz.sectionId);
-
-    // Disable all options
-    document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
-
-    const selBtn = document.getElementById(`optBtn_${selectedIdx}`);
-
-    if (selectedIdx === correctIdx) {
-      selBtn.classList.add('correct');
-      // Reward KSh 100
-      user.balance += 100;
-      user.totalEarnings += 100;
-      user.completedTasks += 1;
-      updateDashboardDisplays();
-      showToast(`🎉 Correct! +KSh 100 added to your dashboard balance.`, 'success');
+    if (region === 'all') {
+      renderProfiles(PROFILES);
     } else {
-      selBtn.classList.add('wrong');
-      document.getElementById(`optBtn_${correctIdx}`).classList.add('correct');
-      showToast(`❌ Incorrect answer. Try the next question!`, 'danger');
+      const filtered = PROFILES.filter(p => p.region === region);
+      renderProfiles(filtered);
+    }
+  }
+
+  function renderGifts() {
+    const container = document.getElementById("gifts-container");
+    container.innerHTML = GIFTS.map(g => `
+      <div class="gift-card" onclick="sendGift('${g.name}', ${g.costGems}, '${g.icon}')">
+        <div class="gift-icon">${g.icon}</div>
+        <div class="gift-name">${g.name}</div>
+        <div class="gift-price">💎 ${g.costGems} Gems</div>
+      </div>
+    `).join('');
+  }
+
+  function updateWalletDisplay() {
+    const usdVal = (userGems / 100).toFixed(2);
+    document.getElementById("nav-gems").innerText = `${userGems} Gems`;
+    document.getElementById("nav-usd").innerText = usdVal;
+    document.getElementById("wallet-gems-val").innerText = `${userGems} Gems`;
+    document.getElementById("wallet-usd-val").innerText = `$${usdVal} USD`;
+  }
+
+  /* Privacy Filter Function */
+  function containsPersonalInfo(text) {
+    // Regular expressions for detecting phone numbers, emails, handles, links
+    const phoneRegex = /(\+?\d{1,4}[-.\s]?)?(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}/;
+    const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+    const urlRegex = /(https?:\/\/|www\.)[^\s]+/;
+    const socialKeywords = /(@|whatsapp|telegram|instagram|wechat|snapchat|facebook|phone|email|call me|text me|line id)/i;
+
+    return phoneRegex.test(text) || emailRegex.test(text) || urlRegex.test(text) || socialKeywords.test(text);
+  }
+
+  /* Chat System Logic */
+  function startChat(profileId) {
+    const target = PROFILES.find(p => p.id === profileId);
+    activeChatTarget = target;
+
+    document.getElementById("chat-target-name").innerText = `${target.name} (${target.location})`;
+    document.getElementById("chat-target-img").src = target.img;
+    document.getElementById("chat-warning").style.display = "none";
+
+    if (!chatHistories[profileId]) {
+      chatHistories[profileId] = [
+        { sender: 'them', text: `Hi there! Hello from ${target.location}. Nice to meet you on Silk & Euro!` }
+      ];
     }
 
-    // Move to next question after 1.5s
-    setTimeout(() => {
-      if (currentQuiz.qIndex < sec.totalQuestions - 1) {
-        currentQuiz.qIndex += 1;
-        renderQuizQuestion();
+    renderChatMessages();
+    openModal('chat-modal');
+  }
+
+  function renderChatMessages() {
+    if (!activeChatTarget) return;
+    const messages = chatHistories[activeChatTarget.id] || [];
+    const container = document.getElementById("chat-messages");
+
+    container.innerHTML = messages.map(m => {
+      if (m.isGift) {
+        return `<div class="chat-msg gift-msg">${m.text}</div>`;
       }
-    }, 1500);
+      return `<div class="chat-msg ${m.sender}">${m.text}</div>`;
+    }).join('');
+
+    container.scrollTop = container.scrollHeight;
   }
 
-  function nextQuestion() {
-    const sec = sections.find(s => s.id === currentQuiz.sectionId);
-    if (currentQuiz.qIndex < sec.totalQuestions - 1) {
-      currentQuiz.qIndex += 1;
-      renderQuizQuestion();
-    }
-  }
+  function sendChatMessage() {
+    const input = document.getElementById("chat-input");
+    const text = input.value.trim();
+    if (!text || !activeChatTarget) return;
 
-  function prevQuestion() {
-    if (currentQuiz.qIndex > 0) {
-      currentQuiz.qIndex -= 1;
-      renderQuizQuestion();
-    }
-  }
-
-  // --- WITHDRAWAL SYSTEM ---
-  function openWithdrawModal() {
-    document.getElementById('wAvailBal').textContent = user.balance.toLocaleString();
-    openModal('withdrawModal');
-  }
-
-  function calculateWithdrawFee() {
-    const amt = parseFloat(document.getElementById('wAmount').value) || 0;
-    const fee = 80;
-    const net = Math.max(0, amt - fee);
-    document.getElementById('wNet').value = `KSh ${net.toLocaleString()}`;
-  }
-
-  function handleWithdrawSubmit(event) {
-    event.preventDefault();
-    const amt = parseFloat(document.getElementById('wAmount').value);
-    const method = document.getElementById('wMethod').value;
-    const account = document.getElementById('wAccount').value;
-
-    if (amt > 3500) {
-      showToast('⚠️ Maximum withdrawal limit is KSh 3,500 per transaction!', 'danger');
+    // Strict Privacy Verification
+    if (containsPersonalInfo(text)) {
+      document.getElementById("chat-warning").style.display = "block";
       return;
     }
 
-    if (amt > user.balance) {
-      showToast('❌ Insufficient balance for this withdrawal amount!', 'danger');
+    document.getElementById("chat-warning").style.display = "none";
+
+    chatHistories[activeChatTarget.id].push({ sender: 'me', text: text });
+    input.value = "";
+    renderChatMessages();
+
+    // Auto simulated response
+    setTimeout(() => {
+      chatHistories[activeChatTarget.id].push({
+        sender: 'them',
+        text: `Thank you for respecting privacy guidelines! I really enjoy chatting with you.`
+      });
+      renderChatMessages();
+    }, 1200);
+  }
+
+  function openGiftModalFor(profileId) {
+    const target = PROFILES.find(p => p.id === profileId);
+    activeChatTarget = target;
+    openModal('gift-modal');
+  }
+
+  function openGiftModal() {
+    openModal('gift-modal');
+  }
+
+  function sendGift(giftName, costGems, icon) {
+    if (!activeChatTarget) return;
+
+    // Send Gift Action
+    userGems += Math.floor(costGems * 0.8); // Adding redeemed gem balance for demonstration
+    updateWalletDisplay();
+
+    if (!chatHistories[activeChatTarget.id]) chatHistories[activeChatTarget.id] = [];
+
+    chatHistories[activeChatTarget.id].push({
+      sender: 'me',
+      isGift: true,
+      text: `${icon} Sent a ${giftName} worth ${costGems} Gems!`
+    });
+
+    closeModal('gift-modal');
+    if (document.getElementById('chat-modal').style.display === 'flex') {
+      renderChatMessages();
+    } else {
+      startChat(activeChatTarget.id);
+    }
+  }
+
+  function handleSignup(e) {
+    e.preventDefault();
+    const username = document.getElementById("signup-username").value;
+    currentUser = { username };
+
+    document.getElementById("auth-buttons").style.display = "none";
+    document.getElementById("user-profile-badge").style.display = "block";
+    document.getElementById("user-display-name").innerText = `👋 ${username}`;
+
+    closeModal('signup-modal');
+    alert(`Welcome to Silk & Euro, ${username}! Your account has been created.`);
+  }
+
+  function handleLogin(e) {
+    e.preventDefault();
+    currentUser = { username: "Member" };
+    document.getElementById("auth-buttons").style.display = "none";
+    document.getElementById("user-profile-badge").style.display = "block";
+    document.getElementById("user-display-name").innerText = `👋 Member`;
+    closeModal('login-modal');
+  }
+
+  function openWalletModal() {
+    updateWalletDisplay();
+    openModal('wallet-modal');
+  }
+
+  function handleCashout(e) {
+    e.preventDefault();
+    const amount = parseInt(document.getElementById("payout-amount").value);
+    const method = document.getElementById("payout-method").value;
+    const details = document.getElementById("payout-details").value;
+
+    if (amount > userGems) {
+      alert("Insufficient Gem balance for this cashout amount.");
       return;
     }
 
-    // Deduct balance
-    user.balance -= amt;
-    updateDashboardDisplays();
-    closeModal('withdrawModal');
+    userGems -= amount;
+    updateWalletDisplay();
 
-    const net = amt - 80;
-    showToast(`💸 Withdrawal request of KSh ${amt} (Net: KSh ${net}) sent via ${method}!`, 'success');
+    const usdVal = (amount / 100).toFixed(2);
+    alert(`Success! Payout request of $${usdVal} USD (${amount} Gems) via ${method.toUpperCase()} (${details}) is being processed!`);
+    closeModal('wallet-modal');
   }
 
-  // --- ADMIN PORTAL ---
-  function openAdminModal() {
-    openModal('adminModal');
-  }
-
-  // --- AUTH HANDLER ---
-  function openAuthModal() {
-    openModal('authModal');
-  }
-
-  function handleAuthSubmit(event) {
-    event.preventDefault();
-    user.name = document.getElementById('authName').value;
-    user.phone = document.getElementById('authPhone').value;
-
-    document.getElementById('authBtn').textContent = `👤 ${user.name}`;
-    closeModal('authModal');
-    showToast(`Welcome back, ${user.name}!`, 'success');
-  }
-
-  // --- UTILS ---
-  function updateDashboardDisplays() {
-    document.getElementById('userBalanceDisplay').textContent = user.balance.toLocaleString();
-    document.getElementById('dashBalance').textContent = user.balance.toLocaleString();
-    document.getElementById('dashCompleted').textContent = user.completedTasks;
-    document.getElementById('dashEarnings').textContent = user.totalEarnings.toLocaleString();
-  }
-
-  function showDashboardView() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function openModal(id) {
-    const el = document.getElementById(id);
-    el.style.display = 'flex';
-    setTimeout(() => el.classList.add('open'), 10);
-  }
-
-  function closeModal(id) {
-    const el = document.getElementById(id);
-    el.classList.remove('open');
-    setTimeout(() => el.style.display = 'none', 250);
-  }
-
-  function showToast(msg, type = 'info') {
-    const toast = document.getElementById('toastNotification');
-    document.getElementById('toastMsg').textContent = msg;
-    document.getElementById('toastIcon').textContent = type === 'danger' ? '⚠️' : type === 'success' ? '✅' : '✨';
-    toast.style.borderColor = type === 'danger' ? 'var(--danger)' : type === 'success' ? 'var(--success)' : 'var(--primary-orange)';
-
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3500);
-  }
-
-  // INITIAL LOAD
-  window.addEventListener('DOMContentLoaded', () => {
-    renderEarningSections();
-    updateDashboardDisplays();
-  });
+  // Generic Modal Helpers
+  function openModal(id) { document.getElementById(id).classList.add('active'); }
+  function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 </script>
 </body>
 </html>

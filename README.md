@@ -1,54 +1,18 @@
-# Apex Profit Hub (Managed by Internet Task Earn)
+# Silk & Euro — Asian & European Dating Platform
 
-Apex Profit Hub is an online earning platform managed by Internet Task Earn offering 6 task sections:
+Silk & Euro is a high-privacy dating and cross-cultural communication web application designed to safely connect Asian and European singles.
 
-## Earning Sections & Fee Structure
+## Key Features
 
-1. **Surveys**:
-   - Unlock Fee: KSh 100
-   - Total Questions: 30
-   - Free Questions: Questions 1–5
-   - Locked Question Cost: KSh 20 each
+1. **User Sign-Up & Profiles**:
+   - Quick registration panel with location & regional preference options.
+   - Profile exploration filtered by Asian & European regions.
 
-2. **Chat Moderation**:
-   - Unlock Fee: KSh 0 (Free to start)
-   - Total Questions: 30
-   - Free Questions: Question 1 free
-   - Locked Question Cost: KSh 20 each
+2. **Strict Privacy Shield ("No Personal Information Allowed")**:
+   - Automated real-time content filtering on chat messages.
+   - Blocks phone numbers, email addresses, external URLs, and social media handles (`@username`, WhatsApp, Instagram, Telegram, WeChat, etc.) to prevent harassment and scamming.
 
-3. **Academic Writing**:
-   - Unlock Fee: KSh 0
-   - Total Questions: 15
-   - Free Questions: Questions 1–6
-   - Locked Question Cost: KSh 20 each
-
-4. **Kufunza Wazungu Kiswahili**:
-   - Unlock Fee: KSh 0
-   - Total Questions: 18
-   - Free Questions: Questions 1–9
-   - Locked Question Cost: KSh 20 each
-
-5. **Risk Management**:
-   - Unlock Fee: KSh 50
-   - Total Questions: 12
-   - Free Questions: Questions 3–5
-   - Locked Question Cost: KSh 20 each
-
-6. **House Reviews**:
-   - Unlock Fee: KSh 0
-   - Total Questions: 20
-   - Free Questions: Questions 1–7
-   - Locked Question Cost: KSh 20 each
-
-## Rewards & Earnings Rules
-- **Reward**: Correct answer = **KSh 100** added instantly to the user dashboard balance.
-
-## Withdrawal Policy
-- **Maximum Withdrawal Limit**: KSh 3,500 per transaction.
-- **Withdrawal Processing Fee**: KSh 80.
-
-## Admin Dashboard Capabilities
-- Real-time monitoring of registered users, payments, question stats, total earnings, withdrawal requests, and overall website progress.
-
-## Design
-- Vibrant mobile-friendly orange-themed UI (#ff6b00), secure authentication, and easy navigation.
+3. **Virtual Gifting & Money Cashout**:
+   - Interactive gift store allowing users to send virtual gifts (Roses, Bubble Tea, Diamond Rings, Castles, etc.).
+   - Gift conversion mechanism: Received gifts convert into Gems which can be redeemed for real money (**100 Gems = $1.00 USD**).
+   - Cashout payout dashboard supporting PayPal, Direct Bank Transfer, Crypto (USDT), and Mobile Money.
